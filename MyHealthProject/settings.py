@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Myhealth_home'
+
 ]
 
 MIDDLEWARE = [
@@ -77,7 +79,7 @@ WSGI_APPLICATION = 'MyHealthProject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'my_test',
+        'NAME': 'myhealth',
         'HOST': '122.112.231.109',
         'PORT': 3306,
         'USER': 'team',
