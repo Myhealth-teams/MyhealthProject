@@ -37,13 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-<<<<<<< HEAD
-    'Myhealth_home'
-=======
+    'Myhealth_home',
     'Myhealth_user',
     'Myhealth_admin',
->>>>>>> 305fbd50e7958084ab2a2120e54f5131e363285f
-
 ]
 
 MIDDLEWARE = [
