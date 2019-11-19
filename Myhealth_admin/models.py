@@ -8,6 +8,16 @@
 from django.db import models
 
 
+class DjangoMigrations(models.Model):
+    app = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
+    applied = models.DateTimeField()
+
+    class Meta:
+        managed = False
+        db_table = 'django_migrations'
+
+
 class SysRole(models.Model):
     role_id = models.AutoField(primary_key=True)
     role_name = models.CharField(max_length=50)
@@ -31,8 +41,8 @@ class SysUser(models.Model):
 
 class SysUserRole(models.Model):
     sr_id = models.AutoField(primary_key=True)
-    role = models.ForeignKey(SysRole, models.DO_NOTHING, blank=True, null=True)
-    sy = models.ForeignKey(SysUser, models.DO_NOTHING, blank=True, null=True)
+    role_id = models.IntegerField(blank=True, null=True)
+    sy_id = models.IntegerField(blank=True, null=True)
 
     class Meta:
         managed = False
